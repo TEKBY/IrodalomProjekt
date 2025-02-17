@@ -8,6 +8,14 @@ namespace IrodalomProjekt.Models
 {
     internal class Kerdes
     {
+        public Kerdes(string kerdesSzoveg, string valaszA, string valaszB, string valaszC, string helyesValasz)
+        {
+            KerdesSzoveg = kerdesSzoveg;
+            ValaszA = valaszA;
+            ValaszB = valaszB;
+            ValaszC = valaszC;
+            HelyesValasz = helyesValasz;
+        }
 
         public string KerdesSzoveg { get; set; }
 
@@ -19,7 +27,16 @@ namespace IrodalomProjekt.Models
 
         public string HelyesValasz { get; set; }
 
-        public string FelhasznaloValasza { get; set; }
+        public string? FelhasznaloValasza { get; set; }
+
+        /// <summary>
+        /// A felhasználó válaszának ellenőrzése, ha nincs kitöltve, akkor a válasz automatikusan hibás.
+        /// </summary>
+        /// <returns></returns>
+        public bool ValaszEllenorzes()
+        {
+            return FelhasznaloValasza is null? false: FelhasznaloValasza.ToLower() == HelyesValasz.ToLower();
+        }
 
     }
 }
