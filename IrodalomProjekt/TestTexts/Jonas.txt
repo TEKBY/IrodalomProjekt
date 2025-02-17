@@ -1,0 +1,50 @@
+﻿Műfaja?
+A: Óda
+B: Elbeszélő költemény 
+C: Himnusz
+Helyes válasz: B
+Hány részből áll?
+A: 4 
+B: 5
+C: 3
+Helyes válasz: A
+Milyen feladatot ad isten Jónásnak?
+A: Menjen Jeruzsálembe prófétálni 
+B: Menjen Ninivébe prófétálni 
+C: Saját városában prófétáljon
+Helyes válasz: B
+Mi történik ez után?
+A: Elmenekül egy hajóra 
+B: Elmegy Ninivébe
+C: Elmegy Jeruzsálembe
+Helyes válasz: A
+Milyen hal gyomrába kerül Jónás?
+A: Cápa
+B: Bálna
+C: Cethal 
+Helyes válasz: C
+Jónás hány napon keresztül prédikál?
+A: 2
+B: 3 
+C: 4
+Helyes válasz: B
+Eljut a királyi palotába, ott mi történik?
+A: Komolyan vették és elhagyták a várost
+B: Komolyan vették de nem hagyták el a várost
+C: Kinevették 
+Helyes válasz: C
+Ezek után Jónás vitatkozik Istennel, miről?
+A: Hogy miért nem pusztította el a várost 
+B: Hogy miért pusztította el a várost
+C: Hogy miért nem adott több időt neki a prófétálásra
+Helyes válasz: A
+Jónás mire jön rá?
+A: Sehol sem fognak hinni neki
+B: Nem az ő feladata az ítélkezés 
+C: Megbolondult 
+Helyes válasz: B
+Babits mit akart elérni ezzel a művel?
+A: Semmit, csak tetszett neki a bibliai történet
+B: Többen higgyenek Istenben
+C: A költő is egy próféta és harcolnia kell 
+Helyes válasz: C
