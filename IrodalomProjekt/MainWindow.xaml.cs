@@ -108,7 +108,12 @@ namespace IrodalomProjekt
 
         private void ElozoClick(object sender, RoutedEventArgs e)
         {
-
+            if (aktualisIndex > 0)
+            {
+                ValaszMenteseClick(sender, e);
+                aktualisIndex--;
+                MutatKerdes(aktualisIndex);
+            }
         }
 
         private void ValaszMenteseClick(object sender, RoutedEventArgs e)
@@ -118,7 +123,12 @@ namespace IrodalomProjekt
 
         private void KovetkezoClick(object sender, RoutedEventArgs e)
         {
-
+            if (aktualisIndex < kerdesek.Count - 1)
+            {
+                ValaszMenteseClick(sender, e);
+                aktualisIndex++;
+                MutatKerdes(aktualisIndex);
+            }
         }
     }
 }
