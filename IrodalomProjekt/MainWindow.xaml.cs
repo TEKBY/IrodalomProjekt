@@ -32,21 +32,28 @@ namespace IrodalomProjekt
             kerdesek.Clear();
             try
             {
-                StreamReader sr = new StreamReader(fileName, Encoding.UTF8);
-                while (!sr.EndOfStream)
+                using (StreamReader sr = new StreamReader(fileName, Encoding.UTF8))
                 {
-                    string kerdesSzovege = sr.ReadLine();
-                    string valaszA = sr.ReadLine();
-                    string valaszB = sr.ReadLine();
-                    string valaszC = sr.ReadLine();
-                    string[] utolsoSor = sr.ReadLine().Split(' ');
-                    string helyesValasz = utolsoSor[2];
-                        
-                }
+                    while (!sr.EndOfStream)
+                    {
+                        string kerdesSzovege = sr.ReadLine();
+                        string valaszA = sr.ReadLine();
+                        string valaszB = sr.ReadLine();
+                        string valaszC = sr.ReadLine();
+                        string[] utolsoSor = sr.ReadLine().Split(' ');
 
+                        if (utolsoSor.Length < 3)
+                            continue;
+
+                        string helyesValasz = utolsoSor[2];
+
+                        kerdesek.Add(new Kerdes(kerdesSzovege, valaszA, valaszB, valaszC, helyesValasz));
+                    }
+                }
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Hiba történt a fájl beolvasása közben: " + ex.Message, "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
