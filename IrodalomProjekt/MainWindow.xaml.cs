@@ -80,9 +80,20 @@ namespace IrodalomProjekt
             }
         }
 
-        private void MutatKerdes(int aktualisIndex)
+        private void MutatKerdes(int index)
         {
-            throw new NotImplementedException();
+            if (kerdesek.Count == 0 || index < 0 || index >= kerdesek.Count)
+                return;
+
+            var aktualisKerdes = kerdesek[index];
+            tbkKerdesSzovege.Text = aktualisKerdes.KerdesSzoveg;
+            ValaszA.Content = "A: " + aktualisKerdes.ValaszA;
+            ValaszB.Content = "B: " + aktualisKerdes.ValaszB;
+            ValaszC.Content = "C: " + aktualisKerdes.ValaszC;
+
+            ValaszA.IsChecked = aktualisKerdes.FelhasznaloValasza == "A";
+            ValaszB.IsChecked = aktualisKerdes.FelhasznaloValasza == "B";
+            ValaszC.IsChecked = aktualisKerdes.FelhasznaloValasza == "C";
         }
 
         private void KiertekelesClick(object sender, RoutedEventArgs e)
