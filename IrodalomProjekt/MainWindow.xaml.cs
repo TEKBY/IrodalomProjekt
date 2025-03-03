@@ -76,7 +76,7 @@ namespace IrodalomProjekt
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
-                    
+
                 }
             }
         }
@@ -99,13 +99,21 @@ namespace IrodalomProjekt
 
         private void KiertekelesClick(object sender, RoutedEventArgs e)
         {
-
+            int helyesValaszok = kerdesek.Count(k => k.ValaszEllenorzes());
+            tbkEredmeny.Text = $"Eredmény: {helyesValaszok}/{kerdesek.Count}";
         }
+
 
         private void KilepesClick(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show("Biztosan ki akarsz lépni?", "Kilépés", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
+
 
         private void ElozoClick(object sender, RoutedEventArgs e)
         {
@@ -119,6 +127,12 @@ namespace IrodalomProjekt
 
         private void ValaszMenteseClick(object sender, RoutedEventArgs e)
         {
+            if (ValaszA.IsChecked == true)
+                kerdesek[aktualisIndex].FelhasznaloValasza = "A";
+            else if (ValaszB.IsChecked == true)
+                kerdesek[aktualisIndex].FelhasznaloValasza = "B";
+            else if (ValaszC.IsChecked == true)
+                kerdesek[aktualisIndex].FelhasznaloValasza = "C";
             if (aktualisIndex < kerdesek.Count)
             {
                 if (ValaszA.IsChecked == true)
